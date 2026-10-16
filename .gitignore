@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Angular
+.angular/cache/
+
+# Logs
+npm-debug.log
+yarn-error.log
+*.log
+
+# Testing
+coverage/
+
+# IDEs and editors
+.idea/
+.vscode/
+.history/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# SQLite runtime databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Miscellaneous
+.sass-cache/
+connect.lock
+libpeerconnection.log
+testem.log
+typings/
+
+# System files
+.DS_Store
+Thumbs.db
