@@ -8,7 +8,7 @@ out-tsc/
 bazel-out/
 
 # Angular
-.angular/cache/
+.angular/
 
 # Logs
 npm-debug.log
