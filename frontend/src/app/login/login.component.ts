@@ -10,7 +10,12 @@ import { RouterLink } from "@angular/router";
         <label>
         <input type="text" placeholder="username"/>
         <input type="password" placeholder="password"/>
+        <button (click)=handleLogin()>useless login button</button>
     `,
     imports: [RouterLink]
 })
-export class LoginComponent {}
+export class LoginComponent {
+    handleLogin() {
+        console.log("hello world");
+    }
+}
