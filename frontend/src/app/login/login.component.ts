@@ -7,15 +7,14 @@ import { RouterLink } from "@angular/router";
     template: `
         <button routerLink="">back to home</button>
         <h3>this is the login page!</h3>
-        <label>
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
-        <button (click)=handleLogin()>useless login button</button>
+        <input #username type="text" placeholder="username"/>
+        <input #password type="password" placeholder="password"/>
+        <button (click)="handleLogin(username.value, password.value)">useless login button</button>
     `,
     imports: [RouterLink]
 })
 export class LoginComponent {
-    handleLogin() {
-        console.log("hello world");
+    handleLogin(user: string, pass: string) {
+        console.log("hello world", user, pass);
     }
 }
