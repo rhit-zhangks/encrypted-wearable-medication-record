@@ -5,7 +5,7 @@ import { Router, RouterLink } from "@angular/router";
     selector: 'app-home',
     standalone: true,
     template: `
-        <h1>hwmr homepage</h1>
+        <h2>hwmr homepage</h2>
         <button routerLink="/login">log in here!</button>
     `,
     imports: [RouterLink]
