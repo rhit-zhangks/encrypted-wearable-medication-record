@@ -7,6 +7,7 @@ import { Router, RouterLink } from "@angular/router";
     template: `
         <h2>hwmr homepage</h2>
         <button routerLink="/login">log in here!</button>
+        <button routerLink="/medication_record">see meds</button>
     `,
     imports: [RouterLink]
 })
