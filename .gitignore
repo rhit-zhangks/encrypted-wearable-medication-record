@@ -39,6 +39,20 @@ coverage/
 *.sqlite
 *.sqlite3
 
+# SQLite databases and temp files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite3-journal
+*.sqlite3-shm
+*.sqlite3-wal
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+
 # Miscellaneous
 .sass-cache/
 connect.lock
