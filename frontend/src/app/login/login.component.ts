@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -10,6 +10,7 @@ import { RouterLink } from "@angular/router";
         <input #password type="password" placeholder="password"/>
         <button (click)="handleLogin(username.value, password.value)">useless login button</button>
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [RouterLink]
 })
 export class LoginComponent {
