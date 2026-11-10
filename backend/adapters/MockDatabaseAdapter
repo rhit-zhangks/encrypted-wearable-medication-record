@@ -1,0 +1,37 @@
+const DatabaseAdapter = require('./DatabaseAdapter');
+
+class MockDatabaseAdapter extends TestAdapter {
+    async getPatient(patientId) {
+        return {
+            id: patientId,
+            firstName: "John",
+            lastName: "Doe"
+        };
+    }
+
+    async getPrescriptions(patientId) {
+        return [
+            {
+                id: 1,
+                patientId: patientId,
+                medication: "Ibuprofen",
+                dosage: "200mg"
+            },
+            {
+                id: 2,
+                patientId: patientId,
+                medication: "Amoxicillin",
+                dosage: "500mg"
+            }
+        ];
+    }
+
+    async getUserLogin(username){
+        return {
+            username: username,
+            password: "testPassword"
+        };
+    }
+}
+
+module.exports = MockDatabaseAdapter;

@@ -8,8 +8,8 @@ class DatabaseAdapter {
         throw new Error("getPrescriptions() not implemented");
     }
 
-    async getPrescription(prescriptionId) {
-        throw new Error("getPrescription() not implemented");
+    async getUserLogin(username){
+        throw new Error("getUserLogin() not implemented");
     }
 }
 
