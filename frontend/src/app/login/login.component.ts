@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login',
@@ -17,12 +18,14 @@ import { inject } from '@angular/core';
 })
 export class LoginComponent {
     private http = inject(HttpClient);
+    private router = inject(Router);
 
     handleLogin(user: string, pass: string) {
         this.http.post('http://localhost:3000/api/login', { username: user, password: pass })
             .subscribe({
                 next: (response) => {
                     console.log("Login successful", response);
+                    this.router.navigate(['/medication_record']);
                 },
                 error: (error) => {
                     console.error("Login failed", error);
