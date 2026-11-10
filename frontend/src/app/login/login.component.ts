@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { HttpClient } from '@angular/common/http';
+import { inject } from '@angular/core';
 
 @Component({
     selector: 'app-login',
@@ -14,7 +16,17 @@ import { RouterLink } from "@angular/router";
     imports: [RouterLink]
 })
 export class LoginComponent {
+    private http = inject(HttpClient);
+
     handleLogin(user: string, pass: string) {
-        console.log("hello world", user, pass);
+        this.http.post('http://localhost:3000/api/login', { username: user, password: pass })
+            .subscribe({
+                next: (response) => {
+                    console.log("Login successful", response);
+                },
+                error: (error) => {
+                    console.error("Login failed", error);
+                }
+            });
     }
 }

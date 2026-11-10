@@ -1,6 +1,6 @@
 const DatabaseAdapter = require('./DatabaseAdapter');
 
-class MockDatabaseAdapter extends TestAdapter {
+class MockDatabaseAdapter extends DatabaseAdapter {
     async getPatient(patientId) {
         return {
             id: patientId,
@@ -29,7 +29,7 @@ class MockDatabaseAdapter extends TestAdapter {
     async getUserLogin(username){
         return {
             username: username,
-            password: "testPassword"
+            password: "test"
         };
     }
 }
